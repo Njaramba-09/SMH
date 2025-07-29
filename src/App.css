@@ -1,98 +1,323 @@
+body {
+  background: linear-gradient(120deg, #e0e7ef 0%, #f7fafc 100%);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 2rem 1rem;
+
+body {
+  background: linear-gradient(120deg, #e0e7ef 0%, #f8fafc 100%);
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  color: #1a202c;
+  margin: 0;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
 #root {
-  max-width: 1280px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.5rem 1rem 3rem 1rem;
   text-align: center;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  font-size: 1.5rem;
+  color: #2b6cb0;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+form input, form select {
+  padding: 0.6rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7fafc;
+  transition: border 0.2s;
 }
-
-.read-the-docs {
-  color: #888;
+form input:focus, form select:focus {
+  border: 1.5px solid #3182ce;
+  outline: none;
+}
+form button {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #3182ce 0%, #63b3ed 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(49, 130, 206, 0.08);
+}
+form button:hover {
+  background: linear-gradient(90deg, #2563eb 0%, #4299e1 100%);
 }
 
 .goal-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin: 12px;
-  padding: 16px;
-  background: #fff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 14px;
+  margin: 18px 0;
+  padding: 22px 28px;
+  background: #f9fafb;
+  box-shadow: 0 2px 12px 0 rgba(49, 130, 206, 0.07);
+  text-align: left;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.goal-card:hover {
+  box-shadow: 0 4px 24px 0 rgba(49, 130, 206, 0.13);
+  border: 1.5px solid #3182ce;
 }
 .goal-card.overdue {
   background: #ffeaea;
+  border-color: #e53e3e;
 }
 .goal-card.warning {
   background: #fffbe6;
+  border-color: #ecc94b;
+}
+.goal-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #2d3748;
+}
+.goal-card button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  background: #e2e8f0;
+  color: #2d3748;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+  box-shadow: none;
+}
+.goal-card button:hover {
+  background: #3182ce;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+}
+
+/* ProgressBar styles (override inline if needed) */
+.progress-bar {
+  background: #e2e8f0;
+  border-radius: 8px;
+  height: 18px;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden;
+}
+.progress-bar-inner {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #38b2ac 0%, #4299e1 100%);
+  transition: width 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #root {
+    padding: 0.5rem;
+    border-radius: 0;
+  }
+  .goal-card {
+    padding: 14px 8px;
+  }
+  form {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.goal-card:hover {
+  box-shadow: 0 6px 24px 0 #0002;
+  border: 1.5px solid #646cff;
+}
+.goal-card.overdue {
+  background: #ffeaea;
+  border-color: #ff6b6b;
+}
+.goal-card.warning {
+  background: #fffbe6;
+  border-color: #ffd600;
+  border-left: 6px solid #ffb300;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+}
+form input, form select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+form input:focus, form select:focus {
+  border: 1.5px solid #646cff;
+}
+form button {
+  padding: 8px 18px;
+  background: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+form button:hover {
+  background: #4b53c0;
+}
+
+h1 {
+  color: #646cff;
+  margin-bottom: 0.5em;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+h2 {
+  color: #222;
+  margin-bottom: 0.5em;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+}
+ul li {
+  margin: 0.2em 0;
+  font-size: 1.05rem;
+}
+
+.goal-card h3 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+.goal-card button {
+  margin-top: 10px;
+  margin-right: 8px;
+  background: #e0e7ff;
+  color: #222;
+  border: 1px solid #646cff33;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.goal-card button:hover {
+  background: #646cff;
+  color: #fff;
+}
+
+.goal-card .overdue {
+  color: #ff3b3b;
+  font-weight: bold;
+}
+.goal-card .warning {
+  color: #ffb300;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 28px;
+  background: #f3f6fa;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px 0 rgba(60, 80, 120, 0.04);
+}
+form input, form select {
+  padding: 8px 12px;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #fff;
+  outline: none;
+  transition: border 0.2s;
+}
+form input:focus, form select:focus {
+  border: 1.5px solid #4f8cff;
+}
+form button[type="submit"] {
+  background: linear-gradient(90deg, #4f8cff 0%, #2356c7 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 1px 4px 0 rgba(60, 80, 120, 0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #2356c7 0%, #4f8cff 100%);
+  box-shadow: 0 2px 8px 0 rgba(60, 80, 120, 0.13);
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 1rem 0.2rem;
+    max-width: 100vw;
+  }
+  .goal-card {
+    padding: 14px 8px 12px 8px;
+  }
+  form {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 6px;
+  }
 }
